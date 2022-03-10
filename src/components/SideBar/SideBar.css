@@ -1,0 +1,14 @@
+.sideBar {
+  text-align: center;
+  background-color: #282c34;
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.brandLogo img {
+    width: 80%;
+}

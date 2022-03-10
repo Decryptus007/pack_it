@@ -1,0 +1,17 @@
+.navLinks {
+    font-weight: 500;
+    font-size: large;
+    cursor: pointer;
+    color: #7c4cec;
+    width: 100%;
+    padding: 5% 0;
+}
+
+.navLinks:hover {
+    background-color: #6f90d3;
+}
+
+.icons {
+    color: #a0b3da;
+    margin-right: 5%;
+}
