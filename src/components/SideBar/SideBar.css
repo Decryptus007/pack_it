@@ -1,4 +1,5 @@
 .sideBar {
+  position: fixed;
   text-align: center;
   background-color: #282c34;
   width: 20vw;

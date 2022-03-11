@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './NavItem.css'
 
 export default function NavItem() {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const handleClick = (id) => {
         switch (id) {
@@ -22,19 +22,19 @@ export default function NavItem() {
                 break;
 
             case 4:
-                navigate("/Chats")
+                navigate("/chats")
                 break;
 
             case 5:
-                navigate("/Notification")
+                navigate("/notification")
                 break;
 
             case 6:
-                navigate("/Support")
+                navigate("/support")
                 break;
 
             case 7:
-                navigate("/Settings")
+                navigate("/settings")
                 break;
 
             default:

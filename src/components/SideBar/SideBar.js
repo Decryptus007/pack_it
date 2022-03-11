@@ -1,7 +1,4 @@
 import React from 'react'
-// eslint-disable-next-line
-import { useNavigate } from "react-router-dom"
-import { BrowserRouter } from "react-router-dom"
 import NavItem from './NavItems/NavItem'
 
 import './SideBar.css'
@@ -13,9 +10,7 @@ export default function SideBar() {
             <div className='brandLogo'>
                 <img src={logImg} alt='Brand Logo' />
             </div>
-            <BrowserRouter>
-                <NavItem />
-            </BrowserRouter>
+            <NavItem />
         </div>
     )
 }

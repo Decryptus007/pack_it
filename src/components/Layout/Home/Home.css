@@ -1,0 +1,41 @@
+
+.homeHeader {
+    padding: 1%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homeHeaderMenu {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homeHeaderMenu .icons {
+    padding-right: 5%;
+    border-right: 2px solid grey;
+}
+
+.homeProfile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homeProfile .homeProfileText p{
+    font-size: smaller;
+}
+
+.profileImage {
+    padding-left: 7%;
+}
+
+.profileImage img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
