@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../Layout"
 
@@ -6,14 +7,20 @@ import './Home.css'
 
 import profileImg from '../../../images/profilePic.jpg'
 
-export default function Home () {
+export default function Home() {
+
     return (
         <Layout>
             <div className="home">
                 <div className="homeHeader">
                     <h2>Home</h2>
                     <div className="homeHeaderMenu">
-                        <FontAwesomeIcon className='icons' icon={['fas', 'bell']} />
+                        <div className="icons">
+                            <Link className="notification" to="/wallet">
+                                <FontAwesomeIcon icon="fa-solid fa-envelope-open-text" />
+                            </Link>
+                        </div>
+
                         <div className="homeProfile">
                             <div className="homeProfileText">
                                 <h4>FullName</h4>
