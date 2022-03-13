@@ -26,25 +26,101 @@
 }
 
 .homeProfile {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.homeProfile .homeProfileText h2{
-    font-size: small;
+.homeProfile .homeProfileText {
+    font-size: 12px;
 }
 
 .homeProfile .homeProfileText p{
-    font-size: x-small;
-}
-
-.profileImage {
-    margin-left: 7%;
+    font-size: 9px;
 }
 
 .profileImage img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.orderStats, .deliveryFund {
+    padding: 3% 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.orderStat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 160px;
+    height: 100px;
+    border-radius: 100% 30% 0% 18% / 0% 26% 59% 36% ;
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.58);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+}
+.orderStat h3 {
+    font-size: medium;
+    font-weight: 500;
+    color: #a0b3da;
+}
+.orderStat h1 {
+    font-weight: 600;
+    color: #282c34;
+}
+
+#activeStat.orderStat {
+    border: 1px solid green;
+}
+#cancelStat.orderStat {
+    border: 1px solid red;
+}
+
+.reqDelivery {
+    background: linear-gradient(180deg, rgba(172, 144, 247, 0.884) 0%, rgba(8,8,85,0.6246985854888831) 64%), url('../../../images/Packaging_for_delivery.jpg');
+    background-size: cover;
+    width: 380px;
+    height: 200px;
+    border-radius: 2%;
+    color: #f5f9ff;
+    text-shadow: 1px 1px #282c34;
+    text-align: right;
+}
+.reqDelivery:hover {
+    background: linear-gradient(180deg, rgba(161, 128, 250, 0.815) 0%, rgba(8, 8, 85, 0.747) 64%), url('../../../images/Packaging_for_delivery.jpg');
+}
+.reqDeliveryCaption {
+    margin-left: 40%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.reqDeliveryCaption p {
+    font-size: x-small;
+}
+.reqDeliveryCaption .icons {
+    margin-left: 80%;
+}
+
+.fundWallet {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    width: 380px;
+    height: 200px;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
 }
