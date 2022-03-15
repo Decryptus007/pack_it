@@ -1,0 +1,70 @@
+
+.walletUI {
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.walletCompartment1, .walletCompartment2 {
+    width: 32vw;
+    height: auto;
+    padding: 3%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.subWalletCompartment1, .subWalletCompartment2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 0;
+}
+.subWalletCompartment1 p, .transactionUI h3 {
+    letter-spacing: 1px;
+    font-size: medium;
+}
+.subWalletCompartment1 .walletBalance span {
+    font-weight: 600;
+    font-size: xx-large;
+}
+.subWalletCompartment1 .icon {
+    font-size: larger;
+}
+
+.subWalletCompartment2 div {
+    padding: 3% 12%;
+}
+.subWalletCompartment2 .fundWalletBtn,
+.subWalletCompartment2 .withdrawBtn,
+.transactBtns .transactBtn {
+    font-size: small;
+    border: 1px solid #ab90f7;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.walletCompartment1 .active {
+    color: white;
+    background-color: #ab90f7;
+    border: 1px solid white;
+}
+
+.transactionUI {
+    margin-top: 5%;
+}
+.transactBtns {
+    display: flex;
+    align-items: center;
+}
+.transactBtns .transactBtn {
+    font-size: small;
+    padding: 2% 7%;
+    margin: 5% 2%;
+}
+.transactionHistories .transactAdd {
+    color: green;
+}
+.transactionHistories .transactSub {
+    color: goldenrod;
+}

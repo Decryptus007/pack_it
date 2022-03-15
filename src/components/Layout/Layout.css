@@ -1,5 +1,6 @@
 .webApp {
-    width: 80vw;
+    width: 78vw;
     margin-left: 20vw;
     padding: 1% 3%;
+    overflow-x: hidden;
 }

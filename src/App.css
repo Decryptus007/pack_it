@@ -6,3 +6,30 @@
   font-family: 'Fredoka', sans-serif;
 }
 
+body {
+  background-color: #f7f4fd;
+  color: #282c34;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #282c34;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ab90f7;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #282c34;  /* creates padding around scroll thumb */
+}
+
+body::-webkit-scrollbar:horizontal{
+  height: 8px;
+  background-color: red;
+}
+body::-webkit-scrollbar-thumb:horizontal{
+  background: #000;
+  border-radius: 10px;
+}

@@ -1,104 +1,22 @@
 
-.homeHeader {
-    padding: 1%;
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.homeHeaderMenu {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.homeHeaderMenu .icons {
-    padding-right: 10%;
-    border-right: 2px solid grey;
-}
-
-.homeHeaderMenu .icons .notification {
-    cursor: pointer;
-    color: #a0b3da;
-}
-
-.homeProfile {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.homeProfile .homeProfileText {
-    font-size: 12px;
-}
-
-.homeProfile .homeProfileText p{
-    font-size: 9px;
-}
-
-.profileImage img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.orderStats, .deliveryFund {
-    padding: 3% 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.orderStat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 160px;
-    height: 100px;
-    border-radius: 100% 30% 0% 18% / 0% 26% 59% 36% ;
-    box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.58);
-    backdrop-filter: blur(8.2px);
-    -webkit-backdrop-filter: blur(8.2px);
-}
-.orderStat h3 {
-    font-size: medium;
-    font-weight: 500;
-    color: #a0b3da;
-}
-.orderStat h1 {
-    font-weight: 600;
-    color: #282c34;
-}
-
-#activeStat.orderStat {
-    border: 1px solid green;
-}
-#cancelStat.orderStat {
-    border: 1px solid red;
-}
-
 .reqDelivery {
-    background: linear-gradient(180deg, rgba(172, 144, 247, 0.884) 0%, rgba(8,8,85,0.6246985854888831) 64%), url('../../../images/Packaging_for_delivery.jpg');
-    background-size: cover;
+    background: linear-gradient(180deg, rgb(95, 62, 184) 0%, rgba(8, 8, 85, 0.966) 84%);
     width: 380px;
     height: 200px;
     border-radius: 2%;
     color: #f5f9ff;
     text-shadow: 1px 1px #282c34;
     text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.reqDelivery:hover {
-    background: linear-gradient(180deg, rgba(161, 128, 250, 0.815) 0%, rgba(8, 8, 85, 0.747) 64%), url('../../../images/Packaging_for_delivery.jpg');
+.reqDelivery img {
+    display: block;
+    height: 100%;
+    width: 50%;
 }
 .reqDeliveryCaption {
-    margin-left: 40%;
     width: 50%;
     height: 100%;
     display: flex;
@@ -114,6 +32,7 @@
 }
 
 .fundWallet {
+    padding: 1%;
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
     width: 380px;
@@ -123,4 +42,40 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
+    color: #ab90f7;
+}
+.fundWallet p {
+    font-size: small;
+    color: #282c34;
+}
+.fundWallet h1 {
+    font-size: xx-large;
+    letter-spacing: 2px;
+}
+.fundBtn {
+    width: 100%;
+    text-align: center;
+    background-color: #ab90f7;
+    padding: 4%;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: 500;
+    text-decoration: none;
+}
+.fundBtn:hover {
+    background-color: #634e9b;
+}
+
+.deliveryHistory {
+    color: #ab90f7;
+}
+.recentDeliveriesHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recentDeliveriesHeader hr {
+    width: 55vw;
+    height: 2px;
 }
