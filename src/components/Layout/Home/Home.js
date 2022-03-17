@@ -8,7 +8,6 @@ import RecentDeliveries from "./RecentDeliveries/RecentDeliveries"
 
 import './Home.css'
 
-import profileImg from '../../../images/profilePic.jpg'
 import reqDeliveryImg from '../../../images/Request Delivery.png'
 
 export default function Home() {

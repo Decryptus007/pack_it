@@ -1,8 +1,18 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../Layout"
 import HomeHeader from "../HeaderTitle/HeaderTitle"
 import OrderStats from "../OrderStats/OrderStats"
+
+// Images import
+import deliveryImg from '../../../images/deliveryPayement.png'
+import cashDeposit from '../../../images/cashDeposit.png'
+import cashWithdrawal from '../../../images/cashWithdrwal.png'
+import atmCardImg from '../../../images/ADD CARD atm.png'
+import masterCard from '../../../images/masterCard.png'
+import verve from '../../../images/verve.png'
+import visa from '../../../images/visa.png'
 
 import './Wallet.css'
 
@@ -13,10 +23,18 @@ export default function Wallet() {
     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
     const transactionHistory = [
-        { transactType: 'Delivery Payment', transactAmount: -2000, time: time, date: date },
-        { transactType: 'Cash Deposit', transactAmount: 15000, time: time, date: date },
-        { transactType: 'Cash Withdrawal', transactAmount: -1000, time: time, date: date },
-        { transactType: 'Delivery Payment', transactAmount: -2000, time: time, date: date },
+        { transactType: 'Delivery Payment', transactImg: deliveryImg, transactAmount: -2000, time: time, date: date },
+        { transactType: 'Cash Deposit', transactImg: cashDeposit, transactAmount: 15000, time: time, date: date },
+        { transactType: 'Cash Withdrawal', transactImg: cashWithdrawal, transactAmount: -1000, time: time, date: date },
+        { transactType: 'Delivery Payment', transactImg: deliveryImg, transactAmount: -2000, time: time, date: date },
+        { transactType: 'Delivery Payment', transactImg: deliveryImg, transactAmount: -2000, time: time, date: date },
+        { transactType: 'Cash Deposit', transactImg: cashDeposit, transactAmount: 15000, time: time, date: date },
+        { transactType: 'Cash Withdrawal', transactImg: cashWithdrawal, transactAmount: -1000, time: time, date: date },
+        { transactType: 'Delivery Payment', transactImg: deliveryImg, transactAmount: -2000, time: time, date: date },
+        { transactType: 'Delivery Payment', transactImg: deliveryImg, transactAmount: -2000, time: time, date: date },
+        { transactType: 'Cash Deposit', transactImg: cashDeposit, transactAmount: 15000, time: time, date: date },
+        { transactType: 'Cash Withdrawal', transactImg: cashWithdrawal, transactAmount: -1000, time: time, date: date },
+        { transactType: 'Delivery Payment', transactImg: deliveryImg, transactAmount: -2000, time: time, date: date },
     ]
 
     return (
@@ -55,11 +73,11 @@ export default function Wallet() {
                                     let displayHistory
                                     if (th.transactType === 'Delivery Payment' || th.transactType === 'Cash Withdrawal') {
                                         displayHistory = (
-                                            <div className="transactionHistory">
+                                            <div key={id} className="transactionHistory">
                                                 <div className="transactDetails">
-                                                    <div>
-                                                        <img src="" alt="imgIcon" />
-                                                        <h4>{th.transactType}<br/><span>
+                                                    <div className="transactInnerStyle">
+                                                        <img src={th.transactImg} alt="imgIcon" />
+                                                        <h4>{th.transactType}<br /><span>
                                                             {th.time} {th.date}
                                                         </span></h4>
                                                     </div>
@@ -67,13 +85,13 @@ export default function Wallet() {
                                                 <h3 className="transactSub">{th.transactAmount}</h3>
                                             </div>
                                         )
-                                    }else if (th.transactType === 'Cash Deposit') {
+                                    } else if (th.transactType === 'Cash Deposit') {
                                         displayHistory = (
-                                            <div className="transactionHistory">
+                                            <div key={id} className="transactionHistory">
                                                 <div className="transactDetails">
-                                                    <div>
-                                                        <img src="" alt="imgIcon" />
-                                                        <h4>{th.transactType}<br/><span>
+                                                    <div className="transactInnerStyle">
+                                                        <img src={th.transactImg} alt="imgIcon" />
+                                                        <h4>{th.transactType}<br /><span>
                                                             {th.time} {th.date}
                                                         </span></h4>
                                                     </div>
@@ -87,7 +105,45 @@ export default function Wallet() {
                             </div>
                         </div>
                     </div>
-                    <div className="walletCompartment2"></div>
+                    <div className="walletCompartment2">
+                        <img className="atmCardImg" src={atmCardImg} alt="Add Card" />
+                        <div className="addCardUI">
+                            <h4>Add New Card</h4>
+                            <div className="scanCard">
+                                <FontAwesomeIcon className="icon" icon="fa-solid fa-qrcode" />
+                                <p>Or Enter Manually</p>
+                                <div className="cardIcons">
+                                    <img className="cardIcon" src={visa} alt="Add Card" />
+                                    <img className="cardIcon active" src={masterCard} alt="Add Card" />
+                                    <img className="cardIcon" src={verve} alt="Add Card" />
+                                </div>
+                                <form className="cardDetails" onSubmit={e => e.preventDefault()}>
+                                    <div className="cardInput">
+                                        <small>Card Name</small>
+                                        <input type={"text"} placeholder="e.g. Adewale Factorial" />
+                                    </div>
+                                    <div className="cardInput">
+                                        <small>Card Number</small>
+                                        <input type={"number"} placeholder="xxxx xxxx xxxx xxxx" />
+                                    </div>
+                                    <div className="expCvc">
+                                        <div className="cardInput">
+                                            <small>Expiry Date</small>
+                                            <input type={"number"} placeholder=" MM/YY " />
+                                        </div>
+                                        <div className="cardInput">
+                                            <small>CVC</small>
+                                            <input type={"number"} placeholder=" XXX " />
+                                        </div>
+                                    </div>
+                                    <Link className="fundBtn" to='/wallet'>
+                                        <div>Fund Wallet</div>
+                                    </Link>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </Layout>

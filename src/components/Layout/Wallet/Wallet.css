@@ -62,9 +62,123 @@
     padding: 2% 7%;
     margin: 5% 2%;
 }
+.transactionHistories {
+    height: 400px;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.transactionHistories:hover {
+    overflow-y: scroll;
+}
 .transactionHistories .transactAdd {
     color: green;
 }
 .transactionHistories .transactSub {
-    color: goldenrod;
+    color: #fdc536;
+}
+.transactionHistories img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 14px;
+}
+.transactionHistories .transactionHistory {
+    background-color: #ab8dfd2d;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    margin: 3% 0;
+    line-height: 1.2rem;
+}
+.transactionHistory .transactInnerStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.transactionHistory .transactInnerStyle h4 span {
+    font-weight: 400;
+    font-size: smaller;
+}
+
+.walletCompartment2 .atmCardImg {
+    margin: 0 auto;
+    margin-top: -30%;
+    display: block;
+    width: 90%;
+}
+.addCardUI {
+    margin-top: 6%;
+}
+.addCardUI h4 {
+    letter-spacing: 1px;
+}
+.addCardUI p {
+    font-size: smaller;
+}
+.addCardUI .scanCard {
+    width: 100%;
+    text-align: center;
+}
+.scanCard .icon {
+    font-size: 3rem;
+    color: #ab90f7;
+    padding: 1%;
+    cursor: pointer;
+}
+.scanCard .cardIcons {
+    width: 80%;
+    margin: 4% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.scanCard .cardIcons .cardIcon {
+    width: 65px;
+    height: 30px;
+    padding: 2%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.scanCard .cardIcon.active {
+    background-color: #c6b2fc;
+}
+
+.cardDetails {
+    width: 80%;
+    margin: 3% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cardInput, .expCvc {
+    width: 100%;
+    margin: 3% auto;
+}
+.expCvc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.expCvc .cardInput {
+    width: 40%;
+    margin: 3% 0;
+}
+.cardDetails .fundBtn {
+    margin: 4% 0;
+}
+.cardInput small{
+    display: block;
+    font-weight: 500;
+    /* margin-left: -70%; */
+    font-size: small;
+}
+.cardInput input {
+    width: 100%;
+    padding: 3%;
+    border-radius: 5px;
+    border: 1px solid #eee8f5;
 }

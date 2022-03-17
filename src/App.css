@@ -14,22 +14,35 @@ body {
 body::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }
-
 body::-webkit-scrollbar-track {
   background: #282c34;        /* color of the tracking area */
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: #ab90f7;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid #282c34;  /* creates padding around scroll thumb */
 }
 
-body::-webkit-scrollbar:horizontal{
-  height: 8px;
-  background-color: red;
+.recentDeliveriesCards::-webkit-scrollbar{
+  height: 6px;
 }
-body::-webkit-scrollbar-thumb:horizontal{
-  background: #000;
+.recentDeliveriesCards::-webkit-scrollbar-track {
+  background: #282c34; 
+}
+.recentDeliveriesCards::-webkit-scrollbar-thumb {
+  background: #ab90f7;
   border-radius: 10px;
 }
+
+.transactionHistories::-webkit-scrollbar {
+  width: 6px;   /* width of the entire scrollbar */
+}
+.transactionHistories::-webkit-scrollbar-track {
+  background: #282c34ce;
+  border-radius: 20px;
+}
+.transactionHistories::-webkit-scrollbar-thumb {
+  background-color: #ac90f7c9;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
