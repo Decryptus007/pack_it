@@ -6,9 +6,9 @@ import HomeHeader from "../HeaderTitle/HeaderTitle"
 import OrderStats from "../OrderStats/OrderStats"
 
 // Images import
-import deliveryImg from '../../../images/deliveryPayement.png'
-import cashDeposit from '../../../images/cashDeposit.png'
-import cashWithdrawal from '../../../images/cashWithdrwal.png'
+import deliveryImg from '../../../images/delivery payment.svg'
+import cashDeposit from '../../../images/cash deposite.svg'
+import cashWithdrawal from '../../../images/cash withdraw.svg'
 import atmCardImg from '../../../images/ADD CARD atm.png'
 import masterCard from '../../../images/masterCard.png'
 import verve from '../../../images/verve.png'
@@ -113,9 +113,9 @@ export default function Wallet() {
                                 <FontAwesomeIcon className="icon" icon="fa-solid fa-qrcode" />
                                 <p>Or Enter Manually</p>
                                 <div className="cardIcons">
-                                    <img className="cardIcon" src={visa} alt="Add Card" />
-                                    <img className="cardIcon active" src={masterCard} alt="Add Card" />
-                                    <img className="cardIcon" src={verve} alt="Add Card" />
+                                    <img className="cardIcon " src={visa} alt="Add Card" />
+                                    <img className="cardIcon " src={masterCard} alt="Add Card" />
+                                    <img className="cardIcon active" src={verve} alt="Add Card" />
                                 </div>
                                 <form className="cardDetails" onSubmit={e => e.preventDefault()}>
                                     <div className="cardInput">
@@ -134,6 +134,7 @@ export default function Wallet() {
                                         <div className="cardInput">
                                             <small>CVC</small>
                                             <input type={"number"} placeholder=" XXX " />
+                                            <FontAwesomeIcon className="cvc" icon="fa-solid fa-credit-card" />
                                         </div>
                                     </div>
                                     <Link className="fundBtn" to='/wallet'>
@@ -141,7 +142,6 @@ export default function Wallet() {
                                     </Link>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>

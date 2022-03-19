@@ -10,6 +10,9 @@ body {
   background-color: #f7f4fd;
   color: #282c34;
 }
+ a {
+   text-decoration: none;
+ }
 
 body::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
@@ -46,3 +49,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
