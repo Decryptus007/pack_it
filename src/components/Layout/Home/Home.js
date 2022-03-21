@@ -10,11 +10,11 @@ import './Home.css'
 
 import reqDeliveryImg from '../../../images/Request Delivery.png'
 
-export default function Home() {
+export default function Home({ signOutUser }) {
     let balance = `10,000`
 
     return (
-        <Layout>
+        <Layout signOutUser={signOutUser}>
             <div className="home">
                 <HomeHeader currentPage="Home" />
                 <OrderStats

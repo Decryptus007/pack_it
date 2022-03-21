@@ -2,21 +2,44 @@
 /* Confirmation Dialog */
 .Modal {
     position: absolute;
-    width: 100%;
-    height: calc(100% + 30px);
-    top: -30px;
+    width: 99vw;
+    top: 0;
+    height: 100%;
     left: 0;
-    background-color: #ab90f7;
+    background-color: #31303394;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    animation: pop 0.5s linear;
+    animation: pop 0.2s linear;
     animation-iteration-count: 1;
+    z-index: 1;
 }
 
-.Modal .info {
-    margin-top: -20rem;
+.info {
+    position: absolute;
+    top: 35%;
+    left: 23vw;
+    text-align: center;
+    background-color: #ab90f7;
+    padding: 2rem;
+    width: 50vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    z-index: 2;
+    animation: pop 0.5s linear;
+}
+.info img {
+  width: 30%;
+  padding: 2rem;
 }
 
 

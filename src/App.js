@@ -31,15 +31,19 @@ function App() {
   }
 
   const signInUser = () => {
-    setAuth(true)
+    setAuth(!auth)
+    navigate('/')
+  }
+  const signOutUser = () => {
+    setAuth(!auth)
     navigate('/')
   }
 
   const loggedInRoutes = (
     <Routes>
-      <Route path="/" index element={<Home />} />
-      <Route path="/wallet" element={<Wallet />} />
-      <Route path="/notification" element={<Notification />} />
+      <Route path="/" index element={<Home signOutUser={signOutUser} />} />
+      <Route path="/wallet" element={<Wallet signOutUser={signOutUser} />} />
+      <Route path="/notification" element={<Notification signOutUser={signOutUser} />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   )

@@ -16,7 +16,7 @@ import visa from '../../../images/visa.png'
 
 import './Wallet.css'
 
-export default function Wallet() {
+export default function Wallet({ signOutUser }) {
 
     const today = new Date();
     let time = today.getHours() + ':' + today.getMinutes()
@@ -38,7 +38,7 @@ export default function Wallet() {
     ]
 
     return (
-        <Layout>
+        <Layout signOutUser={signOutUser}>
             <div className="wallet">
                 <HomeHeader currentPage="Wallet" />
                 <OrderStats

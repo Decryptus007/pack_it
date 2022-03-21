@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './NavItem.css'
 
-export default function NavItem() {
+export default function NavItem({ showModal, signOutUser }) {
     const navigate = useNavigate()
 
     const handleClick = (id) => {
@@ -43,25 +43,29 @@ export default function NavItem() {
         }
     }
 
-    const logOut = () => {
-        //NEEDS A MODAL
-        alert("Logged Out successfully")
-    }
-
     const navLinks = [
         { name: 'Home', icon: <FontAwesomeIcon className='icons' icon={['fas', 'house-user']} />, directTo: () => handleClick(1) },
-        { name: 'Wallet', icon: <FontAwesomeIcon className='icons' icon={['fas', 'wallet']} />,  directTo: () => handleClick(2) },
-        { name: 'Live Tracking', icon: <FontAwesomeIcon className='icons' icon={['fas', 'chalkboard']} />,  directTo: () => handleClick(3) },
+        { name: 'Wallet', icon: <FontAwesomeIcon className='icons' icon={['fas', 'wallet']} />, directTo: () => handleClick(2) },
+        { name: 'Live Tracking', icon: <FontAwesomeIcon className='icons' icon={['fas', 'chalkboard']} />, directTo: () => handleClick(3) },
         { name: 'Chats', icon: <FontAwesomeIcon className='icons' icon={['fas', 'message']} />, directTo: () => handleClick(4) },
         { name: 'Notification', icon: <FontAwesomeIcon className='icons' icon={['fas', 'bell']} />, directTo: () => handleClick(5) },
         { name: 'Support', icon: <FontAwesomeIcon className='icons' icon={['fas', 'headset']} />, directTo: () => handleClick(6) },
         { name: 'Settings', icon: <FontAwesomeIcon className='icons' icon={['fas', 'gears']} />, directTo: () => handleClick(7) },
-        { name: 'Logout', icon: <FontAwesomeIcon className='icons' icon={['fas', 'right-from-bracket']} />, directTo: () => logOut() },
+        {
+            name: 'Logout', 
+            icon: <FontAwesomeIcon className='icons' icon={['fas', 'right-from-bracket']} />, 
+            directTo: () => {
+                showModal()
+                signOutUser()
+            }
+        },
     ]
 
     return (
-        navLinks.map((navLink, id) => (
-            <div className='navLinks' key={id} onClick={navLink.directTo}> {navLink.icon} {navLink.name} </div>
-        ))
+        <>
+            {navLinks.map((navLink, id) => (
+                <div className='navLinks' key={id} onClick={navLink.directTo}> {navLink.icon} {navLink.name} </div>
+            ))}
+        </>
     )
 }
