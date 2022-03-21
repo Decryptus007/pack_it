@@ -1,0 +1,75 @@
+
+.signOutLayout1, .signOutLayout2 {
+    display: inline-block;
+    width: 40%;
+    height: 100vh;
+}
+
+.signOutLayout2 {
+    background-color: white;
+    width: 60%;
+    border-radius: 100% 27% 0% 0% / 100% 0% 59% 0% ;
+}
+
+.imgCanvas, .signOutLayout2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.imgCanvas {
+    padding: 5%;
+    color: white;
+}
+
+.signOutLayout2 form img {
+    width: 20%;
+    display: block;
+    margin: 2% auto;
+    padding: 2%;
+    background-color: #0202029f;
+    border-radius: 100% 71% 50% 18% / 27% 24% 31% 37% ;
+}
+
+.signOutLayout2Main, .signOutLayout2Main form {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.signOutLayout2Main h2 {
+    margin-left: 30%;
+}
+.signOutLayout2Main form {
+    width: 48%;
+    height: 60vh;
+    padding: 2%;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+.signOutLayout2Main .inputLayout {
+    position: relative;
+    margin: 2% 0;
+}
+.signOutLayout2Main .loginIcon {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #ab90f7;
+    font-size: larger;
+}
+.signOutLayout2Main input {
+    padding: 3%;
+    padding-left: 10%;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ab90f7;
+}
+
+.signOutLayout2Main .submitBtn {
+    background-color: #ab90f7;
+}

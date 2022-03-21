@@ -3,13 +3,13 @@ import SideBar from "../SideBar/SideBar"
 
 import './Layout.css'
 
-export default function Layout(props) {
+export default function Layout({ children }) {
 
     return (
         <>
             <SideBar />
             <div className="webApp">
-                {props.children}
+                {children}
             </div>
         </>
     )

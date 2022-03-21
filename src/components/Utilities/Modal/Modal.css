@@ -1,0 +1,32 @@
+
+/* Confirmation Dialog */
+.Modal {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 30px);
+    top: -30px;
+    left: 0;
+    background-color: #ab90f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    animation: pop 0.5s linear;
+    animation-iteration-count: 1;
+}
+
+.Modal .info {
+    margin-top: -20rem;
+}
+
+
+@keyframes pop {
+    from {
+      /* transform: translateY(100%); */
+      transform: scale(0, 0);
+    }
+    to {
+      /* transform: translateY(0%); */
+      transform: scale(1, 1);
+    }
+  }

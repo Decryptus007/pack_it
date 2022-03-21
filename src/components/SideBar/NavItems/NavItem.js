@@ -43,6 +43,11 @@ export default function NavItem() {
         }
     }
 
+    const logOut = () => {
+        //NEEDS A MODAL
+        alert("Logged Out successfully")
+    }
+
     const navLinks = [
         { name: 'Home', icon: <FontAwesomeIcon className='icons' icon={['fas', 'house-user']} />, directTo: () => handleClick(1) },
         { name: 'Wallet', icon: <FontAwesomeIcon className='icons' icon={['fas', 'wallet']} />,  directTo: () => handleClick(2) },
@@ -51,7 +56,7 @@ export default function NavItem() {
         { name: 'Notification', icon: <FontAwesomeIcon className='icons' icon={['fas', 'bell']} />, directTo: () => handleClick(5) },
         { name: 'Support', icon: <FontAwesomeIcon className='icons' icon={['fas', 'headset']} />, directTo: () => handleClick(6) },
         { name: 'Settings', icon: <FontAwesomeIcon className='icons' icon={['fas', 'gears']} />, directTo: () => handleClick(7) },
-        { name: 'Logout', icon: <FontAwesomeIcon className='icons' icon={['fas', 'right-from-bracket']} />, directTo: () => handleClick(8) },
+        { name: 'Logout', icon: <FontAwesomeIcon className='icons' icon={['fas', 'right-from-bracket']} />, directTo: () => logOut() },
     ]
 
     return (

@@ -1,0 +1,83 @@
+
+
+.logLayout1, .logLayout2 {
+    display: inline-block;
+    width: 58%;
+    height: 99%;
+}
+.logLayout1 {
+    background-color: #dce4ffee;
+    border-radius: 100% 73% 91% 0% / 0% 73% 78% 36% ;
+}
+.loginImg, .logLayout2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.loginImg img {
+    width: 80%;
+    height: auto;
+}
+.loginImg h1 {
+    color: #ab90f7;
+    text-align: center;
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.logLayout2 {
+    width: 40%;
+    height: 100vh;
+    color: white;
+}
+
+.logLayout2UI, .logLayout2UI form{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+.logLayout2UI form {
+    width: 75%;
+    height: 60vh;
+}
+.logLayout2UI img {
+    width: 20%;
+    display: block;
+    margin: 2% auto;
+}
+.logLayout2UI input {
+    padding: 3%;
+    padding-left: 10%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+.logLayout2UI ::placeholder {
+    padding-left: 1rem;
+}
+.logLayout2UI .inputNo,
+.logLayout2UI .inputPass {
+    position: relative;
+    margin: 4% 0;
+}
+.logLayout2UI .loginIcon {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #ab90f7;
+    font-size: larger;
+}
+.logLayout2UI p {
+    font-size: small;
+    text-align: center;
+}
+.logLayout2UI p span {
+    text-decoration: underline;
+    cursor: pointer;
+}
