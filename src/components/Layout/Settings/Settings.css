@@ -1,0 +1,57 @@
+
+.settingsUI,
+.settingsLayout1 .settingActn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settingsUI {
+    margin-top: 8%;
+}
+
+.settingsUI .settingsLayout1,
+.settingsUI .settingsLayout2 {
+    width: 48%;
+    /* height: 70%; */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.settingsLayout1 .settingActn {
+    padding: 6% 10%;
+    align-items: flex-start;
+    color: black;
+    justify-content: flex-start;
+    border-radius: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.settingActnIcon,
+.settingActnLog {
+    color: #ab90f7;
+    margin-right: 3%;
+    font-size: larger;
+}
+.settingActnLog {
+    color: white;
+}
+
+.settingsLayout1 .settingActn:nth-child(6) {
+    margin-top: 5%;
+    background-color: #ab90f7;
+    color: white;
+}
+
+.settingsLayout1 .settingActn:hover {
+    background-color: #e5d8fd;
+}
+
+.settingsUI .settingsLayout2 {
+    margin: 0 auto;
+    padding: 2% 5%;
+    height: 75vh;
+}
+

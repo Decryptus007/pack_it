@@ -1,0 +1,27 @@
+
+.aboutUI {
+    width: 100%;
+    text-align: center;
+}
+
+.aboutUI img {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    padding: 2%;
+    background-color: #282c34;
+    margin-bottom: 5%;
+}
+
+.aboutUI h2 {
+    margin-bottom: 10%;
+}
+
+.aboutUI .member {
+    margin: 5% 0;
+    padding: 2% 1%;
+}
+
+.aboutUI .member h3 {
+    margin-bottom: 2%;
+}

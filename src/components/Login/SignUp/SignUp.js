@@ -28,7 +28,7 @@ export default function SignUp({ getVerify, onClick }) {
                         </div>
                         <div className="inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-mobile" />
-                            <input className="inputNoBox" type={"number"} placeholder="Phone No." required />
+                            <input className="inputNoBox" type={"tel"} placeholder="Phone No." required />
                         </div>
                         <div className="inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-at" />

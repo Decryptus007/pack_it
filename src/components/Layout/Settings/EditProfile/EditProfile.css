@@ -1,0 +1,112 @@
+
+.settingsLayout2 .profileSet,
+.settingsLayout2 .profilePicSet {
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+.settingsLayout2 .profileSet {
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+}
+
+.settingsLayout2 .profilePicSet img {
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+/* .settingsLayout2 .profilePicSet:hover .overlay{
+    background: radial-gradient(circle, #ab90f77c 0%, #0808559f 64%);
+} */
+
+.profilePicSet label input{
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+.profilePicSet .setProfilePic {
+    padding: 5% 7%;
+    background-color: #ccbbfa;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profileSet .profileInfo {
+    padding: 5% 1%;
+}
+
+.profileSet .profileInfo input,
+.otherData .otherInfo input {
+    background-color: inherit;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: auto;
+    font-size: large;
+    color: #ab90f7;
+    text-align: center;
+    border: none;
+}
+
+.profileSet .profileInfo input:focus,
+.otherData .otherInfo input:focus {
+    color: black;
+    outline: none;
+    border-bottom: 1px solid #ab90f7;
+}
+
+.profileSet .profileInfo span {
+    color: black;
+    cursor: pointer;
+    font-size: small;
+}
+
+.profileSet .profileInfo p {
+    font-size: small;
+    letter-spacing: 1px;
+}
+
+.otherProfileinfo {
+    margin-top: 5%;
+    color: #ab90f7;
+}
+
+.otherData .otherInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3% auto;
+    padding: 3%;
+    width: 100%;
+    background-color: #e5d8fd;
+    border-radius: 8px;
+}
+
+.otherData .otherInfo input {
+    width: 80%;
+    font-size: small;
+    color: black;
+    font-weight: 400;
+    text-align: left;
+}
+
+.otherData .otherInfo input:focus {
+    color: #ab90f7;
+    border-bottom: 1px solid black;
+}
+
+.otherInfo .embed1 {
+    color: black;
+}
+
+.otherInfo .embed2 {
+    cursor: pointer;
+}

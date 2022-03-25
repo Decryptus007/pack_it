@@ -24,7 +24,7 @@ export default function SignIn({ onClick, getVerify}) {
                         <img src={logoImg} alt="logo" />
                         <div className="inputNo inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-mobile" />
-                            <input className="inputNoBox" type={"number"} placeholder="Phone No." required />
+                            <input className="inputNoBox" type={"tel"} placeholder="Phone No." required />
                         </div>
                         <div className="inputPass inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-unlock" />

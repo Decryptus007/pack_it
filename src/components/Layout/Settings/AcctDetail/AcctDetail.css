@@ -1,0 +1,40 @@
+
+.accDetailUI {
+    padding-top: 5%;
+}
+
+.accDetail {
+    width: 100%;
+    margin: 5% auto;
+}
+
+.accDetail p {
+    font-size: small;
+    font-weight: bold;
+}
+
+.accDetail .input,
+.accDetail .select {
+    margin: 2% 0;
+    width: 90%;
+    font-size: medium;
+    padding: 1%;
+    border-radius: 5px;
+    border: none;
+    background-color: #e5d8fd;
+}
+
+#bankName {
+    margin-top: 10%;
+}
+
+.saveAccBtn {
+    text-align: center;
+    padding: 4%;
+    width: 100%;
+    background-color: #ab90f7;
+    color: white;
+    width: 90%;
+    border-radius: 5px;
+    cursor: pointer;
+}
