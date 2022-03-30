@@ -5,13 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import profileImg from '../../../images/profilePic.jpg'
 
 import './HeaderTitle.css'
+import './HeaderTitleMobile.css'
 
 export default function HomeHeader(props) {
 
-
     return (
         <div className="homeHeader">
-            <h2>{props.currentPage}</h2>
+            <div className="headerM">
+                <FontAwesomeIcon onClick={() => props.showSideBar()} icon="fa-solid fa-bars-staggered" />
+                <h2 style={{display: "inline-block", marginLeft: "5%"}}>{props.currentPage}</h2>
+            </div>
             <div className="homeHeaderMenu">
                 <div className="icons">
                     <Link className="notification" to="/notification">

@@ -6,6 +6,7 @@ import signOutImg from '../../../images/signOutImg.png'
 import formLogo from '../../../images/pack it 111.png'
 
 import './SignUp.css'
+import './SignUpMobile.css'
 
 export default function SignUp({ getVerify, onClick }) {
 

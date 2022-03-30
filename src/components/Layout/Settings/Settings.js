@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -7,14 +7,14 @@ import HomeHeader from "../HeaderTitle/HeaderTitle"
 
 import './Settings.css'
 
-export default function Settings({ signOutUser }) {
+export default function Settings({ signOutUser, showSideBar, showSideBarState }) {
     const navigate = useNavigate()
 
     //I WANNA DISPLAY A CONFIRMATION MODAL DIALOG WINDOW BEFORE LOGGING OUT
     return (
-        <Layout signOutUser={signOutUser}>
+        <Layout signOutUser={signOutUser} showSideBar={showSideBar} showSideBarState={showSideBarState}>
             <div className="settings">
-                <HomeHeader currentPage="Settings" />
+                <HomeHeader currentPage="Settings" showSideBar={showSideBar} />
                 <div className="settingsUI">
                     <div className="settingsLayout1">
                         <div className="settingActn" onClick={() => navigate("editProfile")}>

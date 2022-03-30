@@ -26,3 +26,24 @@
 .navLinks:hover .icons{
     color: #ffffff;
 }
+
+/* MEDIA SCREEN STYLES */
+
+@media (max-width: 1024px) {
+    .navLinks {
+        font-weight: 500;
+        font-size: 95%;
+        cursor: pointer;
+        color: #ab90f7;
+        width: 100%;
+        padding: 2% 0;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width: 425px) {
+    .navLinks {
+        padding: 5% 0;
+        margin: 2% auto;
+    }
+}

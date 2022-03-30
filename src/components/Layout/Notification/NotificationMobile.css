@@ -1,0 +1,6 @@
+
+@media (max-width: 768px) {
+    .notifyHeader .notifyAction {
+        width: 35%;
+    }
+}

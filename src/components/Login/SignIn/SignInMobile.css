@@ -1,0 +1,36 @@
+
+@media (max-width: 768px) {
+    .loginImg img {
+        width: 50%;
+        height: auto;
+    }
+    .loginImg h1 {
+        color: #ab90f7;
+        text-align: center;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    .logLayout2UI form {
+        width: 75%;
+        height: 60vh;
+    }
+
+    .logLayout2UI input {
+        padding-left: 12%;
+        font-size: small;
+    }
+}
+
+@media (max-width: 425px) {
+    .logLayout1 {
+        display: none;
+    }
+    .logLayout2 {
+        background-color: #ab90f7;
+        width: 100%;
+        border-radius: 100% 63% 0% 0% / 0% 43% 59% 36% ;
+    }
+    .logLayout2UI h2 {
+        margin-left: 10%;
+    }
+}

@@ -7,16 +7,17 @@ import OrderStats from "../OrderStats/OrderStats"
 import RecentDeliveries from "./RecentDeliveries/RecentDeliveries"
 
 import './Home.css'
+import './HomeMobile.css'
 
 import reqDeliveryImg from '../../../images/Request Delivery.png'
 
-export default function Home({ signOutUser }) {
+export default function Home({ signOutUser, showSideBar, showSideBarState }) {
     let balance = `10,000`
-
+    
     return (
-        <Layout signOutUser={signOutUser}>
+        <Layout signOutUser={signOutUser} showSideBar={showSideBar} showSideBarState={showSideBarState}>
             <div className="home">
-                <HomeHeader currentPage="Home" />
+                <HomeHeader currentPage="Home" showSideBar={showSideBar} showSideBarState={showSideBarState} />
                 <OrderStats
                     cardTitle1="Active Delivery"
                     cardTitle2="Total Deliveries"

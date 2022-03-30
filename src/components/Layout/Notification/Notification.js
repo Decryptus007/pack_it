@@ -7,8 +7,9 @@ import notifySucss from '../../../images/smiley.png'
 import notifyTrans from '../../../images/transactionNotifiy.png'
 
 import './Notification.css'
+import './NotificationMobile.css'
 
-export default function Notification({ signOutUser }) {
+export default function Notification({ signOutUser, showSideBar, showSideBarState }) {
 
     const [notification, setNotification] = useState([ {
         notifyImg: profilePic,
@@ -55,9 +56,9 @@ export default function Notification({ signOutUser }) {
 
 
     return (
-        <Layout signOutUser={signOutUser}>
+        <Layout signOutUser={signOutUser} showSideBar={showSideBar} showSideBarState={showSideBarState}>
             <div className="notification">
-                <HomeHeader currentPage="Notification" />
+                <HomeHeader currentPage="Notification" showSideBar={showSideBar}/>
                 <div className="noticationUI">
                     <div className="notifyHeader">
                         <h3>Recent</h3>

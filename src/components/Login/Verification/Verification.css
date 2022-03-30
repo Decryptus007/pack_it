@@ -64,3 +64,9 @@
 .verifyBtns button:disabled {
     cursor: not-allowed;
 }
+
+@media (max-width: 425px) {
+    .vLayoutUI {
+        width: 90%;
+    }
+}

@@ -15,8 +15,9 @@ import verve from '../../../images/verve.png'
 import visa from '../../../images/visa.png'
 
 import './Wallet.css'
+import './WalletMobile.css'
 
-export default function Wallet({ signOutUser }) {
+export default function Wallet({ signOutUser, showSideBar, showSideBarState }) {
 
     const today = new Date();
     let time = today.getHours() + ':' + today.getMinutes()
@@ -38,9 +39,9 @@ export default function Wallet({ signOutUser }) {
     ]
 
     return (
-        <Layout signOutUser={signOutUser}>
+        <Layout signOutUser={signOutUser} showSideBar={showSideBar} showSideBarState={showSideBarState}>
             <div className="wallet">
-                <HomeHeader currentPage="Wallet" />
+                <HomeHeader currentPage="Wallet" showSideBar={showSideBar} />
                 <OrderStats
                     cardTitle1="Total Transaction"
                     cardTitle2="Total Deposit"

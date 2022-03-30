@@ -28,3 +28,9 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+@media (max-width: 425px) {
+    .loginLayout {
+        background-color: white;
+    }
+}

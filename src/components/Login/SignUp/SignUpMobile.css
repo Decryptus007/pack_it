@@ -1,0 +1,34 @@
+
+@media (max-width: 768px) {
+    .imgCanvas img {
+        width: 50%;
+    }
+    .imgCanvas h2 {
+        font-size: medium;
+    }
+    .signOutLayout2Main input {
+        font-size: small;
+        padding-left: 13%;
+    }
+}
+
+@media (max-width: 425px) {
+    .signOutLayout1 {
+        display: none;
+    }
+    .signOutLayout2 {
+        width: 100%;
+        border-radius: 100% 100% 0% 0% / 65% 0% 59% 36% ;
+        background-color: #ab90f7;
+    }
+    .signOutLayout2Main h2 {
+        margin-left: 10%;
+    }
+    .signOutLayout2Main form {
+        width: 75%;
+    }
+    .signOutLayout2 form img {
+        background-color: black;
+        width: 30%;
+    }
+}

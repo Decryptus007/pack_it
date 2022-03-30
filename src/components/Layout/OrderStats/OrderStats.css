@@ -34,3 +34,13 @@
 #cancelStat.orderStat {
     border: 1px solid red;
 }
+
+@media (max-width: 768px) {
+    .orderStat {
+        width: 20%;
+        height: 80px;
+    }
+    .orderStat h1 {
+        font-size: medium;
+    }
+}

@@ -29,7 +29,7 @@
     margin: 2% auto;
     padding: 2%;
     background-color: #0202029f;
-    border-radius: 100% 71% 50% 18% / 27% 24% 31% 37% ;
+    border-radius: 10px;
 }
 
 .signOutLayout2Main, .signOutLayout2Main form {

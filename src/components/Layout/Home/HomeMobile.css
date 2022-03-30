@@ -1,0 +1,13 @@
+
+@media (max-width: 768px) {
+    .reqDelivery,
+    .fundWallet {
+        width: 45%;
+        height: 180px;
+        padding: 2%;
+        padding-bottom: 0;
+    }
+    .fundBtn {
+        padding: 2%;
+    }
+}

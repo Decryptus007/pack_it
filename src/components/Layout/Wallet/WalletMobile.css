@@ -1,0 +1,6 @@
+
+@media (max-width: 1024px) {
+    .walletCompartment1, .walletCompartment2 {
+        width: 45vw;
+    }
+}

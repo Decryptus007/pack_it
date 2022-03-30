@@ -6,6 +6,7 @@ import logoImg from '../../../images/favicon.png'
 import deliveryTruck from '../../../images/truckDelivery.png'
 
 import './SignIn.css'
+import './SignInMobile.css'
 
 export default function SignIn({ onClick, getVerify}) {
 

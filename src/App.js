@@ -32,6 +32,7 @@ function App() {
 
   const [auth, setAuth] = useState(false)
   const [signUp, setSignUp] = useState(false)
+  const [showSideBar, setShowSideBar] = useState(true)
 
   const goToVerify = () => {
     setSignUp(true)
@@ -47,17 +48,37 @@ function App() {
     navigate('/')
   }
 
+  const showSideBarFunc = () => {
+    setShowSideBar(!showSideBar)
+  }
+  
   const loggedInRoutes = (
     <Routes>
-      <Route path="/" element={<Home signOutUser={signOutUser} />} />
-      <Route path="wallet" element={<Wallet signOutUser={signOutUser} />} />
-      <Route path="notification" element={<Notification signOutUser={signOutUser} />} />
-      <Route path="settings" element={<Settings signOutUser={signOutUser} />} >
-        <Route path="editProfile" element={<EditProfile /> } />
-        <Route path="accDetail" element={<AcctDetail /> } />
-        <Route path="security" element={<Security /> } />
-        <Route path="notificationSettings" element={<NotificationSettings /> } />
-        <Route path="about" element={<About /> } />
+      <Route path="/" element={<Home
+        signOutUser={signOutUser}
+        showSideBar={showSideBarFunc}
+        showSideBarState={showSideBar}
+      />} />
+      <Route path="wallet" element={<Wallet
+        signOutUser={signOutUser}
+        showSideBar={showSideBarFunc}
+        showSideBarState={showSideBar}
+      />} />
+      <Route path="notification" element={<Notification
+        signOutUser={signOutUser}
+        showSideBar={showSideBarFunc}
+        showSideBarState={showSideBar}
+      />} />
+      <Route path="settings" element={<Settings
+        signOutUser={signOutUser}
+        showSideBar={showSideBarFunc}
+        showSideBarState={showSideBar}
+      />} >
+        <Route path="editProfile" element={<EditProfile />} />
+        <Route path="accDetail" element={<AcctDetail />} />
+        <Route path="security" element={<Security />} />
+        <Route path="notificationSettings" element={<NotificationSettings />} />
+        <Route path="about" element={<About />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
@@ -66,14 +87,14 @@ function App() {
   const loggedOutRoutes = (
     <Routes>
       <Route path="/" index element={<Login getVerify={goToVerify} />} />
-      {signUp && <Route path="verification" element={ <Verification onVerify={signInUser} /> } /> }
-      <Route path="*" element={ <PageNotFound /> } />
+      {signUp && <Route path="verification" element={<Verification onVerify={signInUser} />} />}
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   )
 
   return (
     <div className="App">
-      { auth ? loggedInRoutes : loggedOutRoutes }
+      {auth ? loggedInRoutes : loggedOutRoutes}
     </div>
   )
 }

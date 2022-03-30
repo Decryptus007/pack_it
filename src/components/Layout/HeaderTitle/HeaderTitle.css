@@ -6,6 +6,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.headerM svg {
+    display: none;
+}
 .homeHeaderMenu {
     width: 25%;
     display: flex;

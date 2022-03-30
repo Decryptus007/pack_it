@@ -4,7 +4,7 @@ import Modal from '../Utilities/Modal/Modal'
 
 import './Layout.css'
 
-export default function Layout({ signOutUser, children }) {
+export default function Layout({ signOutUser, children, showSideBar, showSideBarState }) {
     const [showModal, setShowModal] = useState(false)
 
     const tggleModal = () => {
@@ -15,7 +15,7 @@ export default function Layout({ signOutUser, children }) {
         <>
             {showModal && <Modal onClick={tggleModal} >Logged Out successfully</Modal>}
 
-            <SideBar signOutUser={signOutUser} showModal={tggleModal}/>
+            {showSideBarState && <SideBar signOutUser={signOutUser} showModal={tggleModal} showSideBar={showSideBar} />}
             <div className="webApp">
                 {children}
             </div>
