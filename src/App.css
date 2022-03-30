@@ -6,6 +6,13 @@
   font-family: 'Fredoka', sans-serif;
 }
 
+::selection {
+  background: #a3a5f7b4; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #a3a5f7b4; /* Gecko Browsers */
+}
+
 body {
   background-color: #f2edfc;
   color: #282c34;

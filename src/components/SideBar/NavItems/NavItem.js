@@ -1,40 +1,47 @@
 
-import React from 'react'
-import { useNavigate } from "react-router-dom"
+import React, { useState } from 'react'
+import { useNavigate, useLocation } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './NavItem.css'
 
 export default function NavItem({ showModal, signOutUser }) {
+    const [clicked, setClicked] = useState('');
     const navigate = useNavigate()
+    const location = useLocation()
+
+    const navigateTo = (param) => {
+        setClicked(location.pathname)
+        navigate(param)
+    }
 
     const handleClick = (id) => {
         switch (id) {
             case 1:
-                navigate("/")
+                navigateTo('/')
                 break;
             case 2:
-                navigate("/wallet")
+                navigateTo('/wallet')
                 break;
 
             case 3:
-                navigate("/liveTracking")
+                navigateTo('/livetracking')
                 break;
 
             case 4:
-                navigate("/chats")
+                navigateTo('/chats')
                 break;
 
             case 5:
-                navigate("/notification")
+                navigateTo('/notification')
                 break;
 
             case 6:
-                navigate("/support")
+                navigateTo('/support')
                 break;
 
             case 7:
-                navigate("/settings")
+                navigateTo('/settings')
                 break;
 
             default:
@@ -52,8 +59,8 @@ export default function NavItem({ showModal, signOutUser }) {
         { name: 'Support', icon: <FontAwesomeIcon className='icons' icon={['fas', 'headset']} />, directTo: () => handleClick(6) },
         { name: 'Settings', icon: <FontAwesomeIcon className='icons' icon={['fas', 'gears']} />, directTo: () => handleClick(7) },
         {
-            name: 'Logout', 
-            icon: <FontAwesomeIcon className='icons' icon={['fas', 'right-from-bracket']} />, 
+            name: 'Logout',
+            icon: <FontAwesomeIcon className='icons' icon={['fas', 'right-from-bracket']} />,
             directTo: () => {
                 showModal()
                 signOutUser()
@@ -63,9 +70,23 @@ export default function NavItem({ showModal, signOutUser }) {
 
     return (
         <>
-            {navLinks.map((navLink, id) => (
-                <div className='navLinks' key={id} onClick={navLink.directTo}> {navLink.icon} {navLink.name} </div>
-            ))}
+            {navLinks.map((navLink, id) => {
+                let address = `/${navLink.name.toLowerCase()}`
+                if (address === "/home") {
+                    address = "/"
+                }
+                if (address === "/live tracking") {
+                    address = "/livetracking"
+                }
+
+                let output
+                if (address === clicked) {
+                    output = <div className="navLinks onFocus" key={id} onClick={navLink.directTo}> {navLink.icon} {navLink.name} </div>
+                } else {
+                    output = <div className="navLinks" key={id} onClick={navLink.directTo}> {navLink.icon} {navLink.name} </div>
+                }
+                return output
+            })}
         </>
     )
 }
