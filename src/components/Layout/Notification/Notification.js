@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../Layout"
 import HomeHeader from "../HeaderTitle/HeaderTitle"
 
@@ -11,7 +12,7 @@ import './NotificationMobile.css'
 
 export default function Notification({ signOutUser, showSideBar, showSideBarState }) {
 
-    const [notification, setNotification] = useState([ {
+    const [notification, setNotification] = useState([{
         notifyImg: profilePic,
         notifyName: "Alfa Dogo",
         theMssg: "Comrade road no clear oo",
@@ -26,7 +27,7 @@ export default function Notification({ signOutUser, showSideBar, showSideBarStat
         notifyName: "Abeke Alani",
         theMssg: "Oga fuel scarce so you go settle me normal normal",
         time: "1hr ago"
-    },  {
+    }, {
         notifyImg: notifyTrans,
         notifyName: "Transaction Alert",
         theMssg: "Your delivery fee has just been deducted.",
@@ -36,8 +37,8 @@ export default function Notification({ signOutUser, showSideBar, showSideBarStat
         notifyName: "Congratulations",
         theMssg: "Your package have been delivered.",
         time: "Recently"
-    } ])
-    
+    }])
+
     const [updatNot, setUpdateNot] = useState([...notification])
 
     useEffect(() => {
@@ -58,7 +59,7 @@ export default function Notification({ signOutUser, showSideBar, showSideBarStat
     return (
         <Layout signOutUser={signOutUser} showSideBar={showSideBar} showSideBarState={showSideBarState}>
             <div className="notification">
-                <HomeHeader currentPage="Notification" showSideBar={showSideBar}/>
+                <HomeHeader currentPage="Notification" showSideBar={showSideBar} />
                 <div className="noticationUI">
                     <div className="notifyHeader">
                         <h3>Recent</h3>
@@ -70,7 +71,9 @@ export default function Notification({ signOutUser, showSideBar, showSideBarStat
                     <div className="notifyMssgs">
                         {notification.map((notify, id) => (
                             <div key={id} className="notifyMssg">
-                                <div className="deleteNoti" onClick={() => delNotification(id)}>x</div>
+                                <div className="deleteNoti" onClick={() => delNotification(id)}>
+                                    <FontAwesomeIcon icon="fa-solid fa-xmark" />
+                                </div>
                                 <div className="notiDetails">
                                     <div className="notiDetailsMain">
                                         <img src={notify.notifyImg} alt="profilePic" />

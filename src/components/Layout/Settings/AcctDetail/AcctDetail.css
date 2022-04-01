@@ -38,3 +38,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 425px) {
+    .accDetail .input,
+    .accDetail .select {
+        width: 100%;
+    }
+}

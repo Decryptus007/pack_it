@@ -34,13 +34,16 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #282c34;  /* creates padding around scroll thumb */
 }
 
-.recentDeliveriesCards::-webkit-scrollbar{
+.recentDeliveriesCards::-webkit-scrollbar,
+.orderStats::-webkit-scrollbar{
   height: 6px;
 }
-.recentDeliveriesCards::-webkit-scrollbar-track {
+.recentDeliveriesCards::-webkit-scrollbar-track,
+.orderStats::-webkit-scrollbar-track {
   background: #282c34; 
 }
-.recentDeliveriesCards::-webkit-scrollbar-thumb {
+.recentDeliveriesCards::-webkit-scrollbar-thumb,
+.orderStats::-webkit-scrollbar-thumb {
   background: #ab90f7;
   border-radius: 10px;
 }

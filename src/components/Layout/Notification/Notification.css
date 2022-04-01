@@ -39,7 +39,9 @@
     position: relative;
 }
 .notifyMssg .deleteNoti {
-    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     width: 25px;
     height: 25px;
     background-color: #ab90f7;

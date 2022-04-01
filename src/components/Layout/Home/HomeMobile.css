@@ -11,3 +11,15 @@
         padding: 2%;
     }
 }
+
+@media (max-width: 425px) {
+    .deliveryFund {
+        flex-direction: column;
+    }
+
+    .reqDelivery,
+    .fundWallet {
+        width: 95%;
+        margin: 5% 0;
+    }
+}

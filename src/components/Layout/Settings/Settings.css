@@ -14,7 +14,6 @@
 .settingsUI .settingsLayout1,
 .settingsUI .settingsLayout2 {
     width: 48%;
-    /* height: 70%; */
     background-color: white;
     border-radius: 10px;
 }
@@ -55,3 +54,58 @@
     height: 75vh;
 }
 
+@media (max-width: 425px) {
+    .settingsUI {
+        flex-direction: column;
+    }
+
+    .settingsUI .settingsLayout1 {
+        margin: 5% 0;
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        background-color: #c8b5f5;
+        padding: 2%;
+    }
+
+    .settingsLayout1 .settingActn {
+        display: inline-block;
+        width: fit-content;
+        flex: 0 0 auto;
+        padding: 5% 3%;
+        margin: 0 2%;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .settingsLayout1 .settingActn:nth-child(6) {
+        margin-top: 0;
+        background-color: #bfa9fc;
+        color: white;
+    }
+
+    .settingsLayout1 .settingActn p {
+        font-size: small;
+    }
+
+    .settingsLayout1 .settingActnIcon,
+    .settingsLayout1 .settingActnLog {
+        display: none;
+    }
+
+    .settingsUI .settingsLayout2 {
+        width: 90%;
+        box-shadow: 2px 2px 10px grey;
+    }
+
+    .settingsUI .settingsLayout2 {
+        margin-top: 5%;
+        padding: 2% 5%;
+        height: 60vh;
+    }
+}

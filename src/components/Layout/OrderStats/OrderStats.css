@@ -44,3 +44,20 @@
         font-size: medium;
     }
 }
+
+@media (max-width: 425px) {
+    .orderStats {
+        margin: 5% 0;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .orderStat {
+        flex: 0 0 auto;
+        width: 120px;
+        height: 80px;
+        margin: 0 3%;
+    }
+    .orderStat h1 {
+        font-size: medium;
+    }
+}

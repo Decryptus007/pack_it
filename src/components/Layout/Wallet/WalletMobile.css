@@ -2,5 +2,24 @@
 @media (max-width: 1024px) {
     .walletCompartment1, .walletCompartment2 {
         width: 45vw;
+        margin: 5% 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .walletUI {
+        flex-direction: column;
+    }
+
+    .walletCompartment1, .walletCompartment2 {
+        width: 90vw;
+        box-shadow: 2px 2px 10px grey;
+    }
+    .transactionHistories {
+        height: 250px;
+    }
+
+    .walletCompartment2 .atmCardImg {
+        display: none;
     }
 }
