@@ -6,6 +6,11 @@
     align-items: center;
     justify-content: space-between;
 }
+.headerM {
+    width: 50%;
+    margin-left: -3%;
+    text-align: left;
+}
 .headerM svg {
     display: none;
 }

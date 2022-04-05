@@ -24,6 +24,7 @@ import Verification from "./components/Login/Verification/Verification"
 import PageNotFound from "./components/Utilities/PageNotFound/PageNotFound"
 
 import './App.css'
+import ReqDelivery from "./components/Layout/Home/ReqDelivery/ReqDelivery"
 
 library.add(fab, fas, far)
 
@@ -56,6 +57,11 @@ function App() {
   const loggedInRoutes = (
     <Routes>
       <Route path="/" element={<Home
+        signOutUser={signOutUser}
+        showSideBar={showSideBarFunc}
+        showSideBarState={showSideBar}
+      />} />
+      <Route path="reqDelivery" element={<ReqDelivery
         signOutUser={signOutUser}
         showSideBar={showSideBarFunc}
         showSideBarState={showSideBar}

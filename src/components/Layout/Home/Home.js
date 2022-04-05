@@ -35,7 +35,7 @@ export default function Home({ signOutUser, showSideBar, showSideBarState }) {
                             <h2>Request Delivery</h2>
                             <p>Make a delivery</p>
                             <p>Offers ends in June</p>
-                            <Link className="icons" to="/notification">
+                            <Link className="icons" to="/reqDelivery">
                                 <FontAwesomeIcon icon="fa-solid fa-circle-right" />
                             </Link>
                         </div>

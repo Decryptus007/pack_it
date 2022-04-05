@@ -13,6 +13,7 @@
 @media (max-width: 425px) {
     .headerM {
         width: 50%;
+        margin-left: 0;
     }
     .headerM h2 {
         font-size: large;
