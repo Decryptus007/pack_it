@@ -1,0 +1,28 @@
+
+
+
+.miniPageUI {
+    background-color: #f2edfc;
+    padding: 2%;
+    border-radius: 10px;
+    width: 40vw;
+    position: absolute;
+    top: 25%;
+    left: 30vw;
+    z-index: 15;
+    animation: pop 0.5s linear;
+}
+
+@media (max-width: 1024px) {
+   .miniPageUI {
+        width: 60vw;
+        left: 20vw;
+   }
+}
+
+@media (max-width: 425px) {
+    .miniPageUI {
+        width: 90vw;
+        left: 5vw;
+    }
+}

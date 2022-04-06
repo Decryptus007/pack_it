@@ -34,7 +34,7 @@ export default function Home({ signOutUser, showSideBar, showSideBarState }) {
                         <div className="reqDeliveryCaption">
                             <h2>Request Delivery</h2>
                             <p>Make a delivery</p>
-                            <p>Offers ends in June</p>
+                            <p>By clicking on this button</p>
                             <Link className="icons" to="/reqDelivery">
                                 <FontAwesomeIcon icon="fa-solid fa-circle-right" />
                             </Link>

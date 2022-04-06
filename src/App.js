@@ -17,6 +17,8 @@ import AcctDetail from "./components/Layout/Settings/AcctDetail/AcctDetail"
 import Security from "./components/Layout/Settings/Security/Security"
 import NotificationSettings from "./components/Layout/Settings/NotificationSettings/NotificationSettings"
 import About from "./components/Layout/Settings/About/About"
+import ReqDelivery from "./components/Layout/Home/ReqDelivery/ReqDelivery"
+import Chats from "./components/Layout/Chats/Chats"
 
 //Routes false
 import Login from './components/Login/Login'
@@ -24,7 +26,6 @@ import Verification from "./components/Login/Verification/Verification"
 import PageNotFound from "./components/Utilities/PageNotFound/PageNotFound"
 
 import './App.css'
-import ReqDelivery from "./components/Layout/Home/ReqDelivery/ReqDelivery"
 
 library.add(fab, fas, far)
 
@@ -67,6 +68,11 @@ function App() {
         showSideBarState={showSideBar}
       />} />
       <Route path="wallet" element={<Wallet
+        signOutUser={signOutUser}
+        showSideBar={showSideBarFunc}
+        showSideBarState={showSideBar}
+      />} />
+      <Route path="chats" element={<Chats
         signOutUser={signOutUser}
         showSideBar={showSideBarFunc}
         showSideBarState={showSideBar}

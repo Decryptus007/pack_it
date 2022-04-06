@@ -31,6 +31,10 @@
     margin-left: 80%;
 }
 
+.reqDeliveryCaption .icons svg {
+    font-size: x-large;
+}
+
 .fundWallet {
     padding: 1%;
     background-color: #8EC5FC;
