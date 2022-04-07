@@ -1,0 +1,64 @@
+.chatUI {
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatUI .driversChat,
+.chatUI .driverConvo {
+    width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    height: 80vh;
+    border: 1px solid #ab90f7;
+}
+
+.chatUI .driversChat {
+    width: 40%;
+    padding: 1%;
+}
+
+.chatUI .driverChat {
+    padding: 5% 2%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ab90f7;
+    cursor: pointer;
+}
+
+.chatUI .driverChat:focus,
+.chatUI .driverChat:hover {
+    background-color: #dacefc;
+}
+
+.driverChat .img {
+    position: relative;
+    width: 15%;
+} 
+
+.driverChat img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.driverChat .greenDot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #0bf00b;
+    bottom: 5px;
+    right: 2px;
+    z-index: 12;
+}
+
+.driverChat p {
+    margin-left: 3%;
+    color: #ab90f7;
+    font-weight: 500;
+    font-size: large;
+}

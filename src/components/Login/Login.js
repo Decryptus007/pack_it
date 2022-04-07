@@ -1,13 +1,12 @@
 
 import React, { useState } from "react"
-import SignIn from "./SignIn/SignIn"
+import { SignIn } from "./SignIn/SignIn"
 import SignUp from "./SignUp/SignUp"
 
 import './Login.css'
 
-export default function Login({ getVerify }) {
+export default function Login({ getVerify, onVerify, setEmail }) {
     const [createAcc, setCreateAcc] = useState(false)
-    // const [verifyCode, setVerifyCode] = useState()
 
     const goToSignUp = () => {
         setCreateAcc(true)
@@ -16,8 +15,8 @@ export default function Login({ getVerify }) {
         setCreateAcc(false)
     }
 
-    const signIn = <SignIn getVerify={() => getVerify() } onClick={goToSignUp} />
-    const signUp = <SignUp getVerify={() => getVerify() } onClick={goToSignIn} />
+    const signIn = <SignIn onVerify={onVerify} getVerify={getVerify} onClick={goToSignUp} setEmail={setEmail} />
+    const signUp = <SignUp getVerify={() => getVerify() } onClick={goToSignIn} setEmail={setEmail} />
 
     return (
         <div className="loginLayout">

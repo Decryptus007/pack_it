@@ -7,7 +7,7 @@ import vLogo from '../../../images/pack it 111.png'
 
 import './Verification.css'
 
-export default function Verification({ onVerify }) {
+export default function Verification({ onVerify, email }) {
     const [OTP, setOTP] = useState("")
     const [showModal, setShowModal] = useState(false)
     const [modalMssg, setModalMssg] = useState("Error fetching data")
@@ -41,7 +41,7 @@ export default function Verification({ onVerify }) {
                     <img src={vLogo} alt="vLogo" />
                     <div className="vText">
                         <h3>Phone Verification</h3>
-                        <p>We will send verification code to your number: {`080123245678`}</p>
+                        <p>We will send verification code to your email: {email}</p>
                     </div>
                     <div className="otpBoxes">
                         <OTPInput

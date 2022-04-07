@@ -35,7 +35,10 @@ function App() {
 
   const [auth, setAuth] = useState(false)
   const [signUp, setSignUp] = useState(false)
+
   const [showSideBar, setShowSideBar] = useState(true)
+
+  const [vrfyEmail, setVrfyEmail] = useState('')
 
   const goToVerify = () => {
     setSignUp(true)
@@ -104,8 +107,8 @@ function App() {
 
   const loggedOutRoutes = (
     <Routes>
-      <Route path="/" index element={<Login getVerify={goToVerify} />} />
-      {signUp && <Route path="verification" element={<Verification onVerify={signInUser} />} />}
+      <Route path="/" index element={<Login getVerify={goToVerify} onVerify={signInUser} setEmail={setVrfyEmail} />} />
+      {signUp && <Route path="verification" element={<Verification email={vrfyEmail} onVerify={signInUser} />} />}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   )

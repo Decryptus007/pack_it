@@ -1,6 +1,7 @@
 
 
-.logLayout1, .logLayout2 {
+.logLayout1,
+.logLayout2 {
     display: inline-block;
     width: 58%;
     height: 99%;
@@ -80,4 +81,9 @@
 .logLayout2UI p span {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.forgotUI .btn:disabled {
+    cursor: not-allowed !important;
+    background-color: gray !important;
 }

@@ -8,7 +8,7 @@ import formLogo from '../../../images/pack it 111.png'
 import './SignUp.css'
 import './SignUpMobile.css'
 
-export default function SignUp({ getVerify, onClick }) {
+export default function SignUp({ getVerify, onClick, setEmail }) {
 
     return (
         <>
@@ -25,7 +25,11 @@ export default function SignUp({ getVerify, onClick }) {
                         <img src={formLogo} alt='formLogo' />
                         <div className="inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-person" />
-                            <input className="inputNoBox" type={"text"} placeholder="Fullname" required />
+                            <input className="inputNoBox" type={"text"} placeholder="First Name" required />
+                        </div>
+                        <div className="inputLayout">
+                            <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-person" />
+                            <input className="inputNoBox" type={"text"} placeholder="Last Name" required />
                         </div>
                         <div className="inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-mobile" />
@@ -33,7 +37,7 @@ export default function SignUp({ getVerify, onClick }) {
                         </div>
                         <div className="inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-at" />
-                            <input className="inputNoBox" type={"email"} placeholder="Email" required />
+                            <input onChange={e => setEmail(e.target.value)} className="inputNoBox" type={"email"} placeholder="Email" required />
                         </div>
                         <div className="inputLayout">
                             <FontAwesomeIcon className="loginIcon" icon="fa-solid fa-unlock" />
