@@ -15,12 +15,17 @@ export default function Login({ getVerify, onVerify, setEmail }) {
         setCreateAcc(false)
     }
 
-    const signIn = <SignIn onVerify={onVerify} getVerify={getVerify} onClick={goToSignUp} setEmail={setEmail} />
-    const signUp = <SignUp getVerify={() => getVerify() } onClick={goToSignIn} setEmail={setEmail} />
+    const signIn = <SignIn
+        onVerify={onVerify}
+        getVerify={(param) => getVerify(param)}
+        onClick={goToSignUp}
+        setEmail={setEmail}
+    />
+    const signUp = <SignUp getVerify={() => getVerify()} onClick={goToSignIn} setEmail={setEmail} />
 
     return (
         <div className="loginLayout">
-            {createAcc ? signUp  : signIn}
+            {createAcc ? signUp : signIn}
         </div>
     )
 }

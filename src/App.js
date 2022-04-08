@@ -24,6 +24,7 @@ import Chats from "./components/Layout/Chats/Chats"
 import Login from './components/Login/Login'
 import Verification from "./components/Login/Verification/Verification"
 import PageNotFound from "./components/Utilities/PageNotFound/PageNotFound"
+import ResetPwd from "./components/Login/ResetPwd/ResetPwd"
 
 import './App.css'
 
@@ -39,6 +40,7 @@ function App() {
   const [showSideBar, setShowSideBar] = useState(true)
 
   const [vrfyEmail, setVrfyEmail] = useState('')
+  const [resetPage, setResetPage] = useState(false)
 
   const goToVerify = () => {
     setSignUp(true)
@@ -46,8 +48,13 @@ function App() {
   }
 
   const signInUser = () => {
-    setAuth(!auth)
-    navigate('/')
+    if (resetPage) {
+      navigate('resetPassword')
+      setResetPage(false)
+    } else {
+      setAuth(!auth)
+      navigate('/')
+    }
   }
   const signOutUser = () => {
     setAuth(!auth)
@@ -57,7 +64,7 @@ function App() {
   const showSideBarFunc = () => {
     setShowSideBar(!showSideBar)
   }
-  
+
   const loggedInRoutes = (
     <Routes>
       <Route path="/" element={<Home
@@ -107,11 +114,20 @@ function App() {
 
   const loggedOutRoutes = (
     <Routes>
-      <Route path="/" index element={<Login getVerify={goToVerify} onVerify={signInUser} setEmail={setVrfyEmail} />} />
+      <Route path="/" index element={<Login
+        getVerify={(param) => {
+          goToVerify()
+          setResetPage(param)
+        }}
+        onVerify={signInUser}
+        setEmail={setVrfyEmail} />}
+      />
       {signUp && <Route path="verification" element={<Verification email={vrfyEmail} onVerify={signInUser} />} />}
+      {signUp && <Route path="resetPassword" element={<ResetPwd onVerify={signInUser} />} />}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   )
+  console.log(resetPage);
 
   return (
     <div className="App">
