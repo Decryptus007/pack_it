@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../Layout"
@@ -18,6 +18,9 @@ import './Wallet.css'
 import './WalletMobile.css'
 
 export default function Wallet({ signOutUser, showSideBar, showSideBarState }) {
+
+    const [cvc, setCvc] = useState('')
+    const [cardDate, setCardDate] = useState('')
 
     const today = new Date();
     let time = today.getHours() + ':' + today.getMinutes()
@@ -130,11 +133,26 @@ export default function Wallet({ signOutUser, showSideBar, showSideBarState }) {
                                     <div className="expCvc">
                                         <div className="cardInput">
                                             <small>Expiry Date</small>
-                                            <input type={"number"} placeholder=" MM/YY " />
+                                            <input maxLength={5} value={cardDate} onChange={e => {
+                                                let a = e.target.value
+                                                if (e.target.value.length === 2) {
+                                                    a = e.target.value + "/"
+                                                    setCardDate(a)
+                                                    console.log(a[0]);
+                                                } else {
+                                                    setCardDate(e.target.value)
+                                                }
+                                            }} type={"text"} placeholder=" MM/YY " />
                                         </div>
                                         <div className="cardInput">
                                             <small>CVC</small>
-                                            <input type={"number"} placeholder=" XXX " />
+                                            <input value={cvc} onChange={e => {
+                                                if (e.target.value.length === 4) {
+                                                    return false
+                                                } else {
+                                                    setCvc(e.target.value)
+                                                }
+                                            }} type={"number"} placeholder=" XXX " />
                                             <FontAwesomeIcon className="cvc" icon="fa-solid fa-credit-card" />
                                         </div>
                                     </div>
