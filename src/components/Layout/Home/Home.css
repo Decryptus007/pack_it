@@ -43,12 +43,12 @@
 
 @keyframes pulse {
     from {
-        border: 1px solid #ffffff85;
+        border: 1px solid white;
         padding: 5%;
     }
 
     to {
-        border: 2px solid #ffffff85;
+        border: 2px solid white;
         padding: 7%;
     }
 }
