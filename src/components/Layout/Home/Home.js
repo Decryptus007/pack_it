@@ -13,7 +13,7 @@ import reqDeliveryImg from '../../../images/Request Delivery.png'
 
 export default function Home({ signOutUser, showSideBar, showSideBarState }) {
     let balance = `10,000`
-    
+
     return (
         <Layout signOutUser={signOutUser} showSideBar={showSideBar} showSideBarState={showSideBarState}>
             <div className="home">
@@ -36,7 +36,7 @@ export default function Home({ signOutUser, showSideBar, showSideBarState }) {
                             <p>Make a delivery</p>
                             <p>By clicking on this button</p>
                             <Link className="icons" to="/reqDelivery">
-                                <FontAwesomeIcon icon="fa-solid fa-circle-right" />
+                                <FontAwesomeIcon icon="fa-solid fa-circle-chevron-right" />
                             </Link>
                         </div>
                     </div>

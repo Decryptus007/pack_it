@@ -1,4 +1,3 @@
-
 .reqDelivery {
     background: linear-gradient(180deg, rgb(95, 62, 184) 0%, rgba(8, 8, 85, 0.966) 84%);
     width: 380px;
@@ -11,11 +10,13 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .reqDelivery img {
     display: block;
     height: 100%;
     width: 50%;
 }
+
 .reqDeliveryCaption {
     width: 50%;
     height: 100%;
@@ -24,15 +25,32 @@
     align-items: flex-start;
     justify-content: center;
 }
+
 .reqDeliveryCaption p {
     font-size: x-small;
 }
+
 .reqDeliveryCaption .icons {
     margin-left: 80%;
 }
 
 .reqDeliveryCaption .icons svg {
-    font-size: x-large;
+    font-size: large;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px white;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    from {
+        border: 1px solid #ffffff85;
+        padding: 5%;
+    }
+
+    to {
+        border: 2px solid #ffffff85;
+        padding: 7%;
+    }
 }
 
 .fundWallet {
@@ -48,14 +66,17 @@
     justify-content: space-around;
     color: #ab90f7;
 }
+
 .fundWallet p {
     font-size: small;
     color: #282c34;
 }
+
 .fundWallet h1 {
     font-size: xx-large;
     letter-spacing: 2px;
 }
+
 .fundBtn {
     width: 100%;
     text-align: center;
@@ -66,6 +87,7 @@
     font-weight: 500;
     text-decoration: none;
 }
+
 .fundBtn:hover {
     background-color: #634e9b;
 }
@@ -73,12 +95,14 @@
 .deliveryHistory {
     color: #ab90f7;
 }
+
 .recentDeliveriesHeader {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .recentDeliveriesHeader hr {
     width: 55vw;
     height: 2px;
