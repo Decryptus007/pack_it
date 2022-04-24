@@ -37,7 +37,6 @@
 .reqDeliveryCaption .icons svg {
     font-size: large;
     border-radius: 50%;
-    box-shadow: 10px 10px 10px white;
     animation: pulse 1s infinite;
 }
 
