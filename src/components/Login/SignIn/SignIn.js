@@ -45,7 +45,7 @@ export function SignInPage({ onClick, onVerify, switchPage }) {
                 <div style={{ position: "absolute", top: "1px", right: "1px", backgroundColor: "black", opacity: ".6" }} className="adminLogin">
                     <form onSubmit={e => e.preventDefault()}>
                         <h2>Admin Login</h2>
-                        <input style={{ margin: "2% 0" }} type={"text"} placeholder="email" />
+                        <input style={{ margin: "2% 0" }} type={"email"} placeholder="email" />
                         <input style={{ margin: "2% 0" }} type={"password"} placeholder="password" />
                         <button type="submit">Login</button>
                     </form>
