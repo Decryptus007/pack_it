@@ -12,8 +12,10 @@ export function ForgotPass(props) {
     const [val, setVal] = useState('')
     const btnRef = useRef()
 
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
     useEffect(() => {
-        if (val.length >= 1 && val.includes("@")) {
+        if (val.match(mailformat)) {
             btnRef.current.disabled = false
         } else {
             btnRef.current.disabled = true
