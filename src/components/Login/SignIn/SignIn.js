@@ -12,6 +12,7 @@ export function ForgotPass(props) {
     const [val, setVal] = useState('')
     const btnRef = useRef()
 
+    // eslint-disable-next-line no-useless-escape
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     useEffect(() => {
@@ -20,7 +21,7 @@ export function ForgotPass(props) {
         } else {
             btnRef.current.disabled = true
         }
-    }, [val])
+    })
 
     return (
         <div className="forgotUI logLayout2">
@@ -31,7 +32,7 @@ export function ForgotPass(props) {
                     setVal(e.target.value)
                     props.setEmail(e.target.value)
                 }} style={{ display: "block", margin: "3% auto", width: "80%", height: "35px", fontSize: "medium", paddingLeft: "2%", borderRadius: "5px", border: "none" }} className="inputNoBox" type={"email"} placeholder="Email" required />
-                <button ref={btnRef} className="btn" onClick={() => {props.getVerify(true)}} type={"submit"} style={{ display: "block", margin: "0 auto", padding: "2%", width: "50%", background: "transparent", color: "white", border: "1px solid white", borderRadius: "5px", cursor: "pointer" }} >Send OTP</button>
+                <button ref={btnRef} className="btn" onClick={() => { props.getVerify(true) }} type={"submit"} style={{ display: "block", margin: "0 auto", padding: "2%", width: "50%", background: "transparent", color: "white", border: "1px solid white", borderRadius: "5px", cursor: "pointer" }} >Send OTP</button>
             </form>
         </div>
     )
@@ -43,15 +44,15 @@ export function SignInPage({ onClick, onVerify, switchPage }) {
         <div className="logLayout2">
             <div className="logLayout2UI">
 
-            {/* ADMIN LOGIN */}
-                <div style={{ position: "absolute", top: "1px", right: "1px", backgroundColor: "black", opacity: ".6" }} className="adminLogin">
+                {/* ADMIN LOGIN */}
+                {/*<div style={{ position: "absolute", top: "1px", right: "1px", backgroundColor: "black", opacity: ".6" }} className="adminLogin">
                     <form onSubmit={e => e.preventDefault()}>
                         <h2>Admin Login</h2>
                         <input style={{ margin: "2% 0" }} type={"email"} placeholder="email" />
                         <input style={{ margin: "2% 0" }} type={"password"} placeholder="password" />
                         <button type="submit">Login</button>
                     </form>
-                </div>
+                </div>*/}
 
 
                 <h2>Log In</h2>
