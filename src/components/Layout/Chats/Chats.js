@@ -1,5 +1,6 @@
 
 import React from "react"
+// eslint-disable-next-line no-unused-vars
 import { Outlet, useNavigate } from "react-router-dom"
 import Layout from "../Layout"
 import HomeHeader from "../HeaderTitle/HeaderTitle"
@@ -26,7 +27,7 @@ export default function Chats({ signOutUser, showSideBar, showSideBarState }) {
                         {drivers.map((driver, id) => (
                             <div tabIndex={0} className="driverChat" key={id}>
                                 <div className="img">
-                                    <div className="greenDot"></div>
+                                    {/*<div className="greenDot"></div>*/}
                                     <img src={driver.image} alt="driverImg" />
                                 </div>
                                 <p>{driver.name}</p>
