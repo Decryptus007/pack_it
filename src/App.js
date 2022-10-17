@@ -21,6 +21,7 @@ import ReqDelivery from "./components/Layout/Home/ReqDelivery/ReqDelivery"
 import Chats from "./components/Layout/Chats/Chats"
 
 //Routes false
+import IndexHome from "./components/IndexHome/IndexHome"
 import Login from './components/Login/Login'
 import Verification from "./components/Login/Verification/Verification"
 import PageNotFound from "./components/Utilities/PageNotFound/PageNotFound"
@@ -114,7 +115,8 @@ function App() {
 
   const loggedOutRoutes = (
     <Routes>
-      <Route path="/" index element={<Login
+      <Route path="/" element={<IndexHome />} />
+      <Route path="/login" index element={<Login
         getVerify={(param) => {
           goToVerify()
           setResetPage(param)
@@ -130,7 +132,7 @@ function App() {
   console.log(resetPage);
 
   return (
-    <div className="App">
+    <div className="mx-auto App">
       {auth ? loggedInRoutes : loggedOutRoutes}
     </div>
   )
