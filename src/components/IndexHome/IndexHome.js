@@ -10,7 +10,7 @@ const IndexHome = () => {
   return (
     <main className="container bg-white mx-auto">
       <IndexHeader />
-      <section class="mt-12 md:mt-24">
+      <section className="mt-12 md:mt-24">
         <IndexSevices />
         <IndexFeatures />
         <IndexTestimonials />
